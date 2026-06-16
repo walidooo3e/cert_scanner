@@ -1,0 +1,15 @@
+# Good certs
+github.com:443
+google.com:443
+
+# Bad SSL test targets
+#cert is expired
+expired.badssl.com:443 
+#signed by a trusted CA
+self-signed.badssl.com:443 
+#hostname doesn't match the cert's SANs
+wrong.host.badssl.com:443 
+sha256.badssl.com:443
+
+# Bonus
+letsencrypt.org:443
