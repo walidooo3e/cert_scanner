@@ -8,6 +8,6 @@ def get_pem_certificate(host, port=443):
             der_cert = ssock.getpeercert(binary_form=True)
             pem_cert = ssl.DER_cert_to_PEM_cert(der_cert)
             return pem_cert
-
-host_name = "github.com"
-print(get_pem_certificate(host_name))
+if __name__ == "__main__":
+    host_name = "github.com"
+    print(get_pem_certificate(host_name))

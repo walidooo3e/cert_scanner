@@ -20,7 +20,7 @@ def parse_certificate(pem_cert):
     now = datetime.datetime.now(datetime.timezone.utc)
     days_to_expiry = (valid_until - now).days
 
-    try:
+    try:                                # exctract sni
         san_ext = cert.extensions.get_extension_for_class(
             x509.SubjectAlternativeName
         )
